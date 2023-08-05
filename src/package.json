@@ -1,25 +1,23 @@
 {
-  "name": "src",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "build": "webpack",
-    "watch": "DEBUG=True && webpack server",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
+  "dependencies": {
     "bootstrap": "^5.0.1",
-    "css-loader": "^6.8.1",
-    "mini-css-extract-plugin": "^2.7.6",
+    "font-awesome": "^4.7.0",
     "node-sass": "^9.0.0",
-    "sass-loader": "^13.3.2",
-    "style-loader": "^3.3.3",
-    "webpack": "^5.88.2",
-    "webpack-bundle-tracker": "^2.0.1",
-    "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^4.15.1"
+    "npm-watch": "^0.11.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile-sass": "node-sass assets/scss/main.scss static/styles/style.css --watch",
+    "watch": "node-sass assets/scss/main.scss static/styles/style.css --watch",
+    "cs-watch": "sass assets/scss/main.scss static/styles/style.css --watch --no-source-map",
+    "cs-compile": "sass assets/scss/main.scss static/styles/style.css --no-source-map",
+    "cs-compress": "sass assets/scss/main.scss static/styles/style.css --style=compressed --no-source-map",
+    "cs-prefix": "postcss css/style.css -o static/styles/style.css --use autoprefixer -b 'last 4 versions' --no-source-map",
+    "cs-build": "npm-run-all cs-compile cs-compress cs-prefix",
+    "build": "babel assets/js/main.js -o static/js/main.js -f"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.22.9",
+    "@babel/core": "^7.22.9"
   }
 }
