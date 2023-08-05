@@ -47,14 +47,34 @@
     - Push
     git add .
     git commit -m '_text'
-    git push origin 
+    git push origin mywebsite
 
 # Install
 
     bootstrap@5.0.1
 
-# Helpe
+# NPM RUN
 
-    https://blog.kalvad.com/django-webpack-series/
+'npm run watch'
+
+'npm run build'
+
+# Install
+
+https://www.npmjs.com/package/bootstrap
+
+'npm i bootstrap'
+
+https://www.npmjs.com/package/npm-watch
+
+'npm i npm-watch'
+
+https://www.npmjs.com/package/font-awesome
+
+'npm i font-awesome'
+
+https://www.npmjs.com/package/bootstrap/v/5.0.1
+
+'npm i bootstrap@5.0.1'
 
 
