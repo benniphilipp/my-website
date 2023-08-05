@@ -1,0 +1,20 @@
+//============
+// Buttons
+//============
+
+
+.btn-primary {
+    color: #fff;
+    background-color: $primary;
+    border-color: $primary;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: $secondary;
+    border-color: $secondary;
+}
+
+.btn{
+    text-transform: uppercase;
+}

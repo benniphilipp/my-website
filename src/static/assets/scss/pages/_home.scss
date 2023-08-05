@@ -1,0 +1,144 @@
+//============
+// Page - Home
+//============
+
+// Hero Banner Startpage
+
+.hero-banner{
+    background: url(../../image/bg.png) no-repeat; 
+    background-size: contain;
+    min-height: 700px;
+}
+
+//Banner Text
+.image-section,
+.banner-text{
+    color: $gray-900;
+}
+
+
+//methode-section
+.methode-section{
+    position: relative;
+}
+
+.bg-s{
+    background: url(../../image/bg_b.png) no-repeat; 
+    position: absolute;
+    right: 0;
+    bottom: 0%;
+    height: 707px;
+    width: 320px;
+    background-size: cover;
+    opacity:0.2;
+}
+
+// .bg-b{
+//     background: url(../../image/bg_b.png) no-repeat; 
+//     position: absolute;
+//     right: 0;
+//     top: 5%;
+//     height: 807px;
+//     width: 387px;
+//     background-size: cover;
+//     opacity:0.2;
+// }
+
+
+.bg-z{
+    background: url(../../image/bg_z.png) no-repeat; 
+    position: absolute;
+    right: 0;
+    top: 5%;
+    height: 807px;
+    width: 387px;
+    background-size: cover;
+    opacity:0.2;
+}
+
+.bg-r{
+    background: url(../../image/bg_s.png) no-repeat; 
+    position: absolute;
+    left: 0;
+    top: 35%;
+    height: 807px;
+    width: 387px;
+    background-size: cover;
+    opacity:0.2;
+    transform: scaleX(-1);
+}
+
+h3.headline-number{
+    display: flex;
+    width: 100%;
+    font-size: 1.2rem;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+h3.headline-number.one::before{
+    content: "";
+    background: url(../../image/number_01.png) no-repeat;
+    background-size: contain;
+    width: 55px;
+    height: 55px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 1.4rem;
+}
+
+h3.headline-number.tow::before{
+    content: "";
+    background: url(../../image/number_tow.png) no-repeat;
+    background-size: contain;
+    width: 55px;
+    height: 55px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 1.4rem;
+}
+
+h3.headline-number.three::before{
+    content: "";
+    background: url(../../image/number_three.png) no-repeat;
+    background-size: contain;
+    width: 55px;
+    height: 55px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 1.4rem;
+}
+
+h3.headline-number.four::before{
+    content: "";
+    background: url(../../image/number_four.png) no-repeat;
+    background-size: contain;
+    width: 55px;
+    height: 55px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 1.4rem;
+}
+
+h3.headline-number.five::before{
+    content: "";
+    background: url(../../image/number_five.png) no-repeat;
+    background-size: contain;
+    width: 55px;
+    height: 55px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 1.4rem;
+}
+
+h3.headline-number.six::before{
+    content: "";
+    background: url(../../image/number_six.png) no-repeat;
+    background-size: contain;
+    width: 55px;
+    height: 55px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 1.4rem;
+}

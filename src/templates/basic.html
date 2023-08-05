@@ -1,0 +1,17 @@
+{% load static %}
+{% load render_bundle from webpack_loader %}
+
+{% include "includes/header.html" %}
+
+<!--CSS Styles-->
+{% block css %}{% endblock %}
+
+<!--Block Content-->
+<body>
+{% block body%}{% endblock %}
+</body>
+
+{% include "includes/footer.html" %}
+
+<!--Javascript-->
+{% block javasript %}{% endblock %}
