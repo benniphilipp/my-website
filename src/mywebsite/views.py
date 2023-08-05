@@ -4,3 +4,11 @@ from django.shortcuts import render
 
 def home(request):
     return render(request, 'index.html')
+
+#impressum
+def impressum(request):
+    return render(request, 'impressum.html')
+
+#datenschutz
+def datenschutz(request):
+    return render(request, 'datenschutz.html')
