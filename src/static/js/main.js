@@ -63,4 +63,5 @@ document.addEventListener("DOMContentLoaded", () => {
     overlay.classList.remove('active');
     content.classList.remove('active');
   });
+  document.body.classList.add('white');
 });

@@ -12,3 +12,6 @@ def impressum(request):
 #datenschutz
 def datenschutz(request):
     return render(request, 'datenschutz.html')
+
+def dashboard(request):
+    return render(request, 'dashboard.html')
