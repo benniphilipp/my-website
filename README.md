@@ -1,4 +1,15 @@
 
+# My-Website
+    - Models
+        
+
+
+
+# User
+    Ben
+    ben@web.de
+
+
 # Django CMD
     python3 manage.py makemigrations && python3 manage.py migrate
 
@@ -6,6 +17,8 @@
 
     python manage.py collectstatic
     python manage.py createsuperuser
+
+    python manage.py startapp
 
 # ENV
     . env/bin/activate
