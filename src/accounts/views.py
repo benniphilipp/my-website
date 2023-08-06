@@ -12,7 +12,12 @@ from .models import CustomUser
 from .forms import RegisterForm, LoginForm
 
 from django.views.generic.detail import DetailView
+from django.contrib.auth.decorators import login_required
 
+
+@login_required(login_url="/login/")
+def dashboard(request):
+    return render(request, 'dashboard.html')
 
 # Create your views here.
 class UserProfileView(DetailView):
@@ -20,7 +25,7 @@ class UserProfileView(DetailView):
     slug_field = "id"
     template_name = "userprofile.html"
 
-
+#https://dev.to/earthcomfy/creating-a-django-registration-login-app-part-ii-3k6 #https://github.com/earthcomfy/Django-registration-and-login-system/tree/master/users
 class RegisterView(View):
     form_class = RegisterForm
     initial = {'key': 'value'}
@@ -36,19 +41,15 @@ class RegisterView(View):
         if form.is_valid():
             form.save()
 
-            return redirect(to='/')
+            return redirect(to='/accounts/dashboard/')
 
         return render(request, self.template_name, {'form': form})
     
     def dispatch(self, request, *args, **kwargs):
-        # will redirect to the home page if a user tries to access the register page while logged in
         if request.user.is_authenticated:
             return redirect(to='/')
 
-        # else process dispatch as it otherwise normally would
         return super(RegisterView, self).dispatch(request, *args, **kwargs)
-    
-    
     
 # Class based view that extends from the built in login view to add a remember me functionality
 class CustomLoginView(LoginView):
@@ -58,17 +59,12 @@ class CustomLoginView(LoginView):
         remember_me = form.cleaned_data.get('remember_me')
 
         if not remember_me:
-            # set session expiry to 0 seconds. So it will automatically close the session after the browser is closed.
             self.request.session.set_expiry(0)
-
-            # Set session as modified to force data updates/cookie to be saved.
             self.request.session.modified = True
 
-        # else browser session will be as long as the session cookie time "SESSION_COOKIE_AGE" defined in settings.py
         return super(CustomLoginView, self).form_valid(form)
 
-
-
+# Passwort Reset
 class ResetPasswordView(SuccessMessageMixin, PasswordResetView):
     template_name = 'user/password_reset.html'
     email_template_name = 'users/password_reset_email.html'

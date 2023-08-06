@@ -144,7 +144,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 
 # Acoounts settings
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = 'accounts:dashboard'
 LOGIN_URL = 'accounts:login'
 SESSION_COOKIE_AGE = 60 * 60 * 24 * 30
 

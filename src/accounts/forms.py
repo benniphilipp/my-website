@@ -5,8 +5,14 @@ from .models import CustomUser
 
 #Regestriren
 class RegisterForm(UserCreationForm):
+    username = forms.CharField(max_length=100,
+                            required=True,
+                            widget=forms.TextInput(attrs={'placeholder': 'Username',
+                                                            'class': 'form-control',
+                                                            }))
+    
     email = forms.EmailField(required=True,
-                             widget=forms.TextInput(attrs={'placeholder': 'E-Mail-Adresse',
+                             widget=forms.TextInput(attrs={'placeholder': 'Nutzer Name',
                                                            'class': 'form-control',
                                                            }))
     password1 = forms.CharField(max_length=50,

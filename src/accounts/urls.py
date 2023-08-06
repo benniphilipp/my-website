@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import RegisterView, CustomLoginView, ResetPasswordView, UserProfileView
+from .views import RegisterView, CustomLoginView, ResetPasswordView, UserProfileView, dashboard
 
 from django.contrib.auth import views as auth_views
 from accounts.forms import LoginForm
@@ -10,6 +10,7 @@ app_name = 'accounts'
 
 urlpatterns = [
     path('', CustomLoginView.as_view(redirect_authenticated_user=True, template_name='accounts/login.html', authentication_form=LoginForm), name='login'),
+    path('dashboard/', dashboard, name='dashboard'),
     path('register/', RegisterView.as_view(), name='users-register'),
     path('profile/<pk>/', UserProfileView.as_view(), name='user-profile'),
     path('logout/', auth_views.LogoutView.as_view(template_name='accounts/logout.html'), name='logout'),
