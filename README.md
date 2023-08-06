@@ -7,7 +7,7 @@
 # Aktivitäten
     - Models Aktivitäten
 
-# Kundendaten
+# Kundendaten --> customer
     - Models Kundendaten
 
 # Ip Trecking Analyse
