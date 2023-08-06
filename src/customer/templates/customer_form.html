@@ -1,0 +1,6 @@
+<h1>Create Update</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="{% if customer.id %}Update{% else %}Create{% endif %}">
+</form>

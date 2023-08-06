@@ -1,6 +1,9 @@
 # Glossar
     - Models Glossar
 
+# Pipeline
+    - Models Pipline
+
 # Accounts
     - Models Accounts
  
@@ -9,6 +12,10 @@
 
 # Kundendaten --> customer
     - Models Kundendaten
+
+    # WonCampaigns
+    - WonCampaigns
+
 
 # Ip Trecking Analyse
     - Models IP Tracking
@@ -50,7 +57,7 @@
     - Push
     git add .
     git commit -m '_text'
-    git push origin my_accounts
+    git push origin customer
 
 # Install
 
