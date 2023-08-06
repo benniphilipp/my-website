@@ -50,7 +50,7 @@
     - Push
     git add .
     git commit -m '_text'
-    git push origin mywebsite
+    git push origin my_accounts
 
 # Install
 
