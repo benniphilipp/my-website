@@ -1,0 +1,129 @@
+
+{% extends "page.html" %}
+{% load static %}
+
+{% block body %}
+
+
+  <!--Header-->
+  <section class="header">
+    <div class="container">
+        <header class="d-flex flex-wrap align-items-center py-4 position-relative">
+      
+        <a href="/" class="d-flex align-items-center">
+            <img src="{% static '/image/Logo.png' %}" alt="Daten Punkt Logo" height="45" width="45">
+        </a>
+    
+
+        <span class="menu-btn">
+            <span class="btn-line"></span>
+            <span class="btn-line"></span>
+            <span class="btn-line"></span>
+        </span>
+
+        <nav class="menu">
+            <div class="body-nav">
+                <ul class="menu-nav">
+                    <li class="nav-item text-white"><a href="#" class="nav-link active display-6" aria-current="page">Glossar <small>coming soon</small></a></li>
+                    <!-- <li class="nav-item"><a href="#" class="nav-link display-6">Features</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link display-6">Pricing</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link display-6">FAQs</a></li> -->
+                  </ul>
+                  <!-- <ul class="list-group list-group-horizontal" style="margin-left: -10px;">
+                    <li class="list-group-item sozial">
+                      <a href="#">
+                        <i class="fa-brands fa-square-facebook"></i>
+                      </a>
+                    </li>
+                    <li class="list-group-item sozial">
+                      <a href="#">
+                        <i class="fa-brands fa-square-instagram"></i>
+                      </a>
+                    </li>
+                    <li class="list-group-item sozial">
+                      <a href="#">
+                        <i class="fa-brands fa-linkedin"></i>
+                      </a>
+                    </li>
+                  </ul> -->
+                  
+                  <img src="/image/Logo.png" class="logo" alt="Daten Punkt Logo" height="65" width="65">
+            </div>
+        </nav>
+        </header>
+    </div>
+</section>
+<!--Header-->
+
+<div class="main text-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 my-5 py-5">
+
+
+                <h1>Impressum</h1>
+
+                    <p>Verantwortlich für den Inhalt dieser Seiten:</p>
+        <p>Pixel West<br>
+        Benjamin Philipp</p>
+        <p>Lantech Innovationszentrum<br>
+        Bruggfeldstraße 5<br>
+        6500 Landeck<br>
+        Österreich</p>
+        <p>Umsatzsteuer-Identifikationsnummer: ATU72422915</p>
+        <p>Sparkasse Imst<br>
+        IBAN: AT06 2050 2000 0087 0519<br>
+        BIC: SSPIMAT21XXX</p>
+        <p>Mobil: <a href="tel:+436643942852">+436643942852</a></p>
+        <p>Mail: <a href="mailto:support@pixel-west.at">support@pixel-west.at</a><br>
+        Home:&nbsp;<a href="https://www.pixel-west.at/">www.pixel-west.at</a></p>
+        <p>Mitglied der WKO Landeck</p>
+        <p>Bezirkshauptmannschaft Landeck</p>
+        <p>Verbraucher haben die Möglichkeit, Beschwerden&nbsp;&nbsp;&nbsp; an&nbsp;&nbsp;&nbsp; die&nbsp;&nbsp;&nbsp; Online-</p>
+        <p>Streitbeilegungsplattform der EU zu richten: <a href="http://ec.europa.eu/odr">http://ec.europa.eu/odr</a>.</p>
+        <p>Sie können allfällige Beschwerde auch an die oben angegebene E-Mail-Adresse richten.</p>
+        
+       
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<footer class="px-5">
+    <div class="container my-2 py-2">
+      <div class="row">
+        <div class="col-12 col-lg-1">
+          <ul>
+            <li><a href="{% url 'mywebsite:impressum' %}" class="text-white">Impressum</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-lg-1">
+          <ul>
+            <li><a href="{% url 'mywebsite:datenschutz' %}" class="text-white">Datenschutz</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container my-2 py-2">
+      <div class="row mb-5">
+        <div class="col-12 col-lg-6">
+          <img src="{% static '/image/Logo.png' %}" class="logo" alt="Daten Punkt Logo" height="65" width="65">
+        </div>
+        <div class="col-12 col-lg-6 text-white align-self-end ">
+          <small class="d-flex justify-content-end">2023© Daten Punkt</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  {% block javasript %}
+  <script src="{% static '/js/main.js' %}"></script>
+  {% endblock %}
+
+
+{% endblock body %}

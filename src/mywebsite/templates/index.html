@@ -1,0 +1,543 @@
+{% extends "page.html" %}
+{% load static %}
+
+{% block body %}
+
+
+    <!--Header-->
+    <section class="header">
+        <div class="container">
+            <header class="d-flex flex-wrap align-items-center py-4 position-relative">
+          
+            <a href="/" class="d-flex align-items-center">
+                <img src="{% static '/image/Logo.png' %}" alt="Daten Punkt Logo" height="45" width="45">
+            </a>
+        
+            <span class="menu-btn" onclick="dataLayer.push({'event': 'button1-click'});">
+                <span class="btn-line"></span>
+                <span class="btn-line"></span>
+                <span class="btn-line"></span>
+            </span>
+
+            <nav class="menu">
+                <div class="body-nav">
+                    <ul class="menu-nav">
+                        <li class="nav-item text-white"><a href="#" class="nav-link active display-6" aria-current="page">Glossar <small>coming soon</small></a></li>
+                        <!-- <li class="nav-item"><a href="#" class="nav-link display-6">Features</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link display-6">Pricing</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link display-6">FAQs</a></li> -->
+                      </ul>
+                      <!-- <ul class="list-group list-group-horizontal" style="margin-left: -10px;">
+                        <li class="list-group-item sozial">
+                          <a href="#">
+                            <i class="fa-brands fa-square-facebook"></i>
+                          </a>
+                        </li>
+                        <li class="list-group-item sozial">
+                          <a href="#">
+                            <i class="fa-brands fa-square-instagram"></i>
+                          </a>
+                        </li>
+                        <li class="list-group-item sozial">
+                          <a href="#">
+                            <i class="fa-brands fa-linkedin"></i>
+                          </a>
+                        </li>
+                      </ul> -->
+                      
+                      <img src="{% static '/image/Logo.png' %}" class="logo" alt="Daten Punkt Logo" height="65" width="65">
+                </div>
+            </nav>
+            </header>
+        </div>
+    </section>
+    <!--Header-->
+
+    <div class="main">
+
+      <!--Hero Banner-->
+      <section class="hero-banner">
+        <div class="container">
+          <div class="row">
+
+            <div class="col-12 col-lg-6 my-lg-5 py-lg-5 px-5">
+              <div class="mt-5 mb-5 my-lg-5 py-lg-5 pe-lg-5 text-white">
+                <small class="text-primary">MAXIMIEREN SIE IHREN ERFOLG!</small>
+                <h1>Wie Sie als Online-Händler, höhere Umsätze erzielen und bessere Kunden gewinnen - und das ganz ohne komplexe Marketing-Ideen oder längere Arbeitstage.</h1>
+                <p>Wir machen Ihre Daten für Ihr Marketing nutzbar, sodass Sie Ihre Kunden passgenau ansprechen können.</p>
+                <button class="btn btn-lg btn-primary mt-2 open-overlay" >Strategiegespräch buchen</button>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-6 my-lg-5 py-lg-5 ps-lg-5 d-none d-lg-block align-self-center">
+              <div class="mb-5 my-lg-5 py-lg-5">
+                <img class="img-fluid" src="{% static '/image/banner_img.png' %}" alt="">
+              </div>
+          </div>
+
+          </div>
+        </div>
+      </section>
+      <!--Hero Banner-->
+
+      <!--Banner Text-->
+      <section class="banner-text bg-white text-black">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 my-lg-5 py-lg-5 mt-5 mb-4 px-5">
+              <div class="mt-lg-5 pt-lg-5"></div>
+              <small class="text-primary">ERKENNTNISSE GEWINNEN. POTENZIALE ENTFESSELN.</small>
+              <h2 class="mt-4" style="color:#120e1b;">Die Herausforderungen im Marketing: Hohe Kosten, keine Zeit, nicht messbar. Kommt Ihnen das bekannt vor?</h2>
+              <p class="mt-lg-4 mt-3" style="color:#120e1b;font-weight:600;">Es fehlt an Klarheit: Was passiert aktuell in ihrem Markt? Wer sind ihre Kunden? Wo ist Ihr Unternehmen sichtbar? Wann sollten Sie gezielt Marketing-Maßnahmen setzen? 
+                Wie sieht Ihr idealer Marketing-Mix aus? Und zu guter Letzt: Warum? All diese Fragen werden wir gemeinsam mit oder ihrem Team beantworten.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--/.Banner Text-->
+
+      <!--Image Section-->
+      <section class="image-section bg-white text-black px-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 mt-lg-5 pt-lg-5">
+              <p class="text-center"><small class="text-primary">DATEN FUNNEL ARCHITEKT FÜR BESSEREN ROI, CPC UND NACHHALTIGES MARKETING.</small></p>
+              <h2 class="text-center text-dark" style="color:#120e1b;">Wir sind kompetenter Übersetzer Ihrer Marketing-Daten.</h2>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-12 col-lg-8 mb-lg-5 pb-lg-5 mt-5 mb-5">
+              <img class="img-fluid mx-auto d-block" src="{% static '/image/image_text_user.png' %}" alt="">
+
+              <div class="d-grid col-12 col-lg-6 mx-auto mt-lg-5 mt-5 mb-lg-5 pb-lg-5">
+                <button class="btn btn-lg btn-primary mt-2 open-overlay">Strategiegespräch buchen</button>
+              </div>
+            
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--/.Image Section-->
+
+
+      <!--Funnel Section-->
+      <section class="funnel-section px-5">
+        <div class="container my-lg-5 py-lg-5">
+
+          <div class="row mt-5 mb-3 mt-5 mb-lg-3 mt-lg-5 pt-lg-5 justify-content-center">
+            <div class="col-12 col-lg-8">
+              <p class="text-center"><small class="text-primary">DER MARKTING FRAGEN FUNNEL</small></p>
+              <h2 class="text-center mt-4 text-white">Fragen, die jede Marketingabteilung kennt und wir gemeinsam beantworten.</h2>
+            </div>
+          </div>
+
+          <div class="row align-items-center text-white">
+
+            <div class="col-lg-6 col-12 pe-lg-5 mt-5">
+              <img class="img-fluid d-none d-lg-block" src="{% static '/image/Awareness.png' %}" alt="">
+            </div>
+            <div class="col-lg-6 col-12 ps-lg-5 mt-5">
+              <h2 class="display-7">AWARENESS</h2>
+              <ul>
+                <li>Welche unserer Marketingaktivitäten zahlt auf unsere Marke ein?</li>
+                <li>Wie können wir unseren Marketing-Mix verbessern, um die Bekanntheit zu steigern?</li>
+                <li>Wie viele mögliche Kunden erreichen wir?</li>
+              </ul>
+            </div>
+            
+            <div class="col-lg-6 col-12 pe-lg-5 mt-4">
+              <img class="img-fluid d-none d-lg-block" src="{% static '/image/Acquisition.png' %}" alt="">
+            </div>
+            <div class="col-lg-6 col-12 ps-lg-5 mt-5">
+              <h2 class="display-7">ACQUISITION</h2>
+              <ul>
+                <li>Welche Kampagnen überzeugen Menschen bei Ihnen zu kaufen?</li>
+                <li>Wie viele Nutzer haben sich für unseren Newsletter angemeldet?</li>
+                <li>Woher kamen Ihre besten Kunden?</li>
+              </ul>
+            </div>
+            
+            <div class="col-lg-6 col-12 pe-lg-5 mt-4">
+              <img class="img-fluid d-none d-lg-block" src="{% static '/image/Activation.png' %}" alt="">
+            </div>
+            <div class="col-lg-6 col-12 ps-lg-5 mt-5">
+              <h2 class="display-7">ACTIVATION</h2>
+              <ul>
+                <li>Welche Produkte kaufen Kunden durch welche Kampagne / Kanal?</li>
+                <li>Welche Seiten der Website sind verkaufsfördernd?</li>
+                <li>Was kostet sie ein Kunde?</li>
+              </ul>
+            </div>
+            
+            <div class="col-lg-6 col-12 pe-lg-5 mt-4">
+              <img class="img-fluid d-none d-lg-block" src="{% static '/image/Retention.png' %}" alt="">
+            </div>
+            <div class="col-lg-6 col-12 ps-lg-5 mt-5">
+              <h2 class="display-7">Retention</h2>
+              <ul>
+                <li>Beim wievielten Besuch kaufen Kunden das neue Angebot?</li>
+                <li>Kommen Kunden wieder? Falls ja, wie oft?</li>
+                <li>Wie lange bleiben Sie dem Angebot treu?</li>
+              </ul>
+            </div>
+            
+
+            <div class="col-lg-6 col-12 mb-lg-5 pb-lg-5 pe-lg-5 mt-4">
+              <img class="img-fluid d-none d-lg-block" src="{% static '/image/Revenue.png' %}" alt="">
+            </div>
+            <div class="col-lg-6 col-12 mb-lg-5 pb-lg-5 ps-lg-5 mt-5">
+              <h2 class="display-7">Revenue</h2>
+              <ul>
+                <li>Wie hoch ist euer Kundenwert (CLV)?</li>
+                <li>Wo verlieren wir das größte Umsatzpotenzial?</li>
+                <li>Warum kündigen die Kunden?</li>
+              </ul>
+            </div>
+
+          </div>
+
+
+          <div class="row justify-content-center">
+            <div class="col-12 col-lg-8">
+              <h5 class="text-center text-white">Neben Einblicken mit Tiefgang bieten wir Marketing-Maßnahmen mit Weitblick.</h5>
+            </div>
+          </div>
+
+          <div class="d-grid col-12 col-lg-4 mx-auto mt-lg-2 mt-5 mb-lg-2 pb-lg-2">
+            <button class="btn btn-lg btn-primary mt-2 open-overlay">Strategiegespräch buchen</button>
+          </div>
+
+        </div>
+      </section>
+      <!--/.Funnel Section-->
+
+
+      <!--Methode Section-->
+      <section class="methode-section px-5">
+        <div class="container my-5 py-5">
+
+          <div class="row justify-content-center my-5 py-5">
+            <div class="col-12 col-lg-8">
+              <p class="text-center"><small class="text-primary">DIE METHODE</small></p>
+              <h2 class="text-center text-white">Durch unsere Methode in der Datenanalyse lösen wir die größten Probleme im Marketing.</h2>
+            </div>
+          </div>
+
+          <div class="row text-white m-0 p-2 p-lg-0">
+            <div class="col-12 col-lg-3 align-self-center">
+              <h3 class="headline-number one">Ihre Ziele klar definieren</h3>
+            </div>
+            <div class="col-12 col-lg-6">
+              <p>Wir beginnen damit, Ihre Marketing-Ziele zu definieren. Was möchten wir mit den Daten erreichen? Möchten wir das Nutzerverhalten auf der Website verstehen, 
+                den Erfolg Ihrer Marketing-Kampagnen messen oder die Konversionsraten verbessern? Durch das Festhalten konkreter Ziele können wir den Fokus der Datenanalyse bestimmen.</p>
+            </div>
+          </div>
+
+          <div class="row m-0 p-0">
+            <div class="col-12 col-lg-3 m-0 p-0 pt-xs-5">
+              <img class="img-fluid d-none d-lg-block" src="{% static '/image/test.png' %}" alt="">
+            </div>
+          </div>
+
+          <div class="row justify-content-end text-white m-0 p-2 p-lg-0">
+            <div class="col-12 col-lg-3 align-self-center">
+              <h3 class="headline-number tow">Relevante Daten</h3>
+            </div>
+            <div class="col-12 col-lg-6 text-white">
+              <p>Wir identifizieren die Metriken, die Ihnen helfen, die definierten Ziele zu erreichen. Zum Beispiel könnten die Seitenaufrufe, Verweildauer, Absprungraten oder 
+                Konversionsraten sein. Wir wählen diejenigen Metriken aus, die am besten zu Ihren Zielen passen und die helfen, aussagekräftige Informationen zu liefern.</p>
+            </div>
+          </div>
+
+          <div class="row m-0 p-0">
+            <div class="col-12 col-lg-3">
+              <img class="img-fluid d-none d-lg-block" src="{% static '/image/links.png' %}" alt="">
+            </div>
+          </div>
+
+
+          <div class="row m-0 p-2 p-lg-0">
+            <div class="col-12 col-lg-3 align-self-center text-white">
+              <h3 class="headline-number three">Sammeln und Analysieren</h3>
+            </div>
+            <div class="col-12 col-lg-6 text-white">
+              <p>Wir sammeln anhand der Anforderungen die relevanten Daten. Eine umfassende Tracking-Lösung wird implementiert, unter Berücksichtigung der Datenschutzbestimmungen, 
+                um die Privatsphäre der Nutzer zu schützen. Alle Daten werden in Reports und Dashboards überführt, wo sie leicht zu analysieren sind.</p>
+            </div>
+          </div>
+
+          <div class="row m-0 p-2 p-lg-0">
+            <div class="col-12 col-lg-3 m-0 p-0">
+              <img class="img-fluid d-none d-lg-block" src="{% static '/image/test.png' %}" alt="">
+            </div>
+          </div>
+
+          <div class="row justify-content-end m-0 p-2 p-lg-0">
+            <div class="col-12 col-lg-3 align-self-center text-white">
+              <h3 class="headline-number four">Daten stehen jetzt bereit</h3>
+            </div>
+            <div class="col-12 col-lg-6 text-white">
+              <p>Basierend auf der Datenanalyse können wir Schlussfolgerungen und konkrete Handlungsempfehlungen ableiten. Wir identifizieren die Bereiche, in denen Verbesserungen vorgenommen werden müssen, um die Datenqualität zu steigern, die wir benötigen, um unsere Ziele zu erreichen.</p>
+            </div>
+          </div>
+
+
+          <div class="row m-0 p-0">
+            <div class="col-12 col-lg-3 m-0 p-0">
+              <img class="img-fluid d-none d-lg-block" src="{% static '/image/links.png' %}" alt="">
+            </div>
+          </div>
+
+
+          <div class="row m-0 p-2 p-lg-0">
+            <div class="col-12 col-lg-3 align-self-center">
+              <h3 class="headline-number five text-white">Marketing aktivieren</h3>
+            </div>
+            <div class="col-12 col-lg-6 text-white">
+              <p>Die Bereinigung und Verbesserung der Daten werden für Marketing und Vertrieb genutzt. Wir erreichen jetzt eine höhere Kundenzufriedenheit und eine geringere Absprungrate, sowie eine höhere Kundenbindung. 
+                Wir haben auch eine höhere Konversionsrate. So kann das gesamte Team weiter datenbasiert handeln und Entscheidungen treffen, um langfristig und nachhaltig den Umsatz zu steigern.</p>
+            </div>
+          </div>
+
+
+          <div class="row m-0 p-0">
+            <div class="col-12 col-lg-3 m-0 p-0">
+              <img class="img-fluid d-none d-lg-block" src="{% static '/image/test.png' %}" alt="">
+            </div>
+          </div>
+
+          <div class="row justify-content-end m-0 p-2 p-lg-0">
+            <div class="col-12 col-lg-3">
+              <h3 class="headline-number six text-white">Weitere Optionen</h3>
+            </div>
+            <div class="col-12 col-lg-6 text-white">
+              <p>Wir werden Daten und Metriken überwachen und den Fortschritt der Handlungsempfehlungen weiterverfolgen. 
+                Auch weitere Datenquellen aus einem CRM- oder ERP-System werden bei Bedarf mit einbezogen, damit Sie die gewünschten Ergebnisse erzielen.</p>
+            </div>
+          </div>
+
+
+          <div class="bg-s"></div>
+          <div class="bg-z"></div>
+          <div class="bg-r"></div>
+
+        </div>
+      </section>
+      <!--/.Methode Section-->
+
+
+      <section class="data-correct px-5">
+
+        <div class="container my-5 py-5">
+          <div class="row justify-content-center text-white">
+            <div class="col-12 col-lg-8">
+              <p class="text-center">
+                <small class="text-primary">IHRE DATEN</small>
+              </p>
+              <h2 class="text-center">Die richtigen Daten, um Ihr Marketing auf das nächste Level zu bringen.</h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="container mb-5 pb-5 text-white">
+
+
+
+            <div class="row">
+              <div class="col-12 col-lg-9">
+                <div class="row">
+                  <div class="col-12 col-md-6 col-lg-4 px-3 py-3">
+                    <div class="card h-100">
+                      <div class="card-body">
+                        <h5>Ihr Marketing</h5>
+                        Durch die Anpassungsfähigkeit auf Markt- und Kundenschwankungen können Sie effektiver mit Ihrem Budget umgehen und Verluste minimieren.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-4 px-3 py-3">
+                    <div class="card h-100">
+                      <div class="card-body">
+                        <h5>Genaue Daten</h5>
+                        Dank klarer Erkenntnisse darüber, was wirksam ist und was nicht, sind Sie in der Lage, gezielte Maßnahmen zu ergreifen.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-4 px-3 py-3">
+                    <div class="card h-100">
+                      <div class="card-body">
+                        <h5>Leistungsindikatoren</h5>
+                        Steigern Sie die Effektivität Ihres Marketings mithilfe präziser KPIs wie CAC, CLV, ROI, ROAS, CR, NRR, CPC, CPI und mehr.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-4 px-3 py-3">
+                    <div class="card h-100">
+                      <div class="card-body">
+                        <h5>Ihre Kunden</h5>
+                        Durch ein besseres Verständnis Ihrer Kunden können Sie gezielt passende Botschaften einsetzen, um sie anzusprechen.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-4 px-3 py-3">
+                    <div class="card h-100">
+                      <div class="card-body">
+                        <h5>Targeting</h5>
+                        Durch präzise Analysen erhältst du Einblicke, wie du effektiv deine Kosten für Kundenakquise (CAC), Kosten pro Klick (CPC) und Kosten pro Installation (CPI) reduzieren kannst.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-4 px-3 py-3">
+                    <div class="card h-100">
+                      <div class="card-body">
+                        <h5>Ihr Saleszyklus</h5>
+                        Durch das Verständnis der Vertriebler können Sie erkennen, welche Kunden sich kurz vor dem Kauf befinden und zum optimalen Zeitpunkt kontaktiert werden können. Vereinbaren Sie eine kostenlose Strategieberatung.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-6 col-lg-3">
+                <img src="{% static '/image/image_user.png' %}" class="img-fluid h-100 py-3" alt="">
+              </div>
+            </div>
+
+        </div>
+      </section>
+
+      <!-- <section class="testimonial">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-lg-7">
+              <small class="text-white">Problem</small>
+              <p class="text-white">dsdsdsd</p>
+              <small class="text-white">Ziel</small>
+              <p class="text-white">dsdsd</p>
+              <small class="text-white">Lösung</small>
+              <p class="text-white">dsdsd</p>
+            </div>
+            <div class="col-12 col-lg-5">
+              <h2 class="text-white">Dachziegel & Baustoffe im Online-Shop kaufen - bei frankebaustoffe.de</h2>
+            </div>
+          </div>
+        </div>
+      </section> -->
+
+      <section class="section-cta px-5">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-12 col-lg-8 my-5 py-5">
+              <h2 class="text-center text-white">Vereinbaren Sie eine kostenlose Strategieberatung.</h2>
+              <p class="text-center text-white">Ihre Antworten werden zu 100 % vertraulich behandelt. Sie unterstützen uns dabei, auf Ihre individuelle Situation einzugehen. Das Erstgespräch ist kostenlos und unverbindlich.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="container pb-5 text-white">
+          <div class="row">
+            <div class="col-12 col-md-12 col-lg-4 px-3 py-3">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h3 class="headline-number one">Ihre Eintragung</h3>
+                  <p>Im Formular auf der nächsten Seite stellen wir Dir einige Fragen, um Dich besser kennenzulernen. Nur so können wir uns individuell auf unser persönliches Erstgespräch vorbereiten.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-12 col-lg-4 px-3 py-3">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h3 class="headline-number tow pt-1">Persönliches Gespräch</h3>
+                  <p>Im 2. Schritt: Wir sprechen über Ihre offenen Fragen und die Möglichkeiten. Wir schauen gemeinsam, ob eine Tracking-Lösung das Richtige für Sie ist.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-12 col-lg-4 px-3 py-3">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h3 class="headline-number three">Mögliche Zusammenarbeit</h3>
+                  <p>Wenn beide Seiten merken, dass eine Zusammenarbeit sinnvoll ist, besprechen wir gemeinsam, wie eine Zusammenarbeit aussieht.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-grid col-12 col-lg-3 mx-auto mb-lg-2 pb-lg-2 mb-5">
+          <button class="btn btn-lg btn-primary mt-2 open-overlay">Strategiegespräch buchen</button>
+        </div>
+
+      </section>
+
+      <section class="cta-user text-white px-5">
+        <div class="container">
+          <div class="row my-5 py-5">
+            <div class="col-12 col-lg-7">
+              <h5>Marketing-Maßnahmen mit Weitblick mit Benjamin Philipp</h5>
+              <p>Als erfahrener Freelancer habe ich meine Fähigkeiten und Kenntnisse vor allem in der Praxis erworben. In den letzten 7 Jahren war ich hauptsächlich bei namhaften Technologieunternehmen tätig. 
+                Meine derzeitige Beschäftigung liegt vor allem in der Datenanalyse und der Ableitung fundierter Entscheidungen aus den gewonnenen Erkenntnissen.</p>
+                <p>Klingt interessant? Vereinbaren Sie ein Strategiegespräch mit mir.</p>
+            </div>
+            <div class="col-12 col-lg-5">
+              <img class="img-fluid mx-auto d-block" src="{% static '/image/web_ben_.jpeg' %}" alt="">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-user text-white px-5">
+        <div class="container">
+          <div class="row my-5 py-5">
+            <div class="col-12 col-lg-7">
+              <img class="img-fluid mx-auto d-block" src="{% static '/image/lantech.jpeg' %}" alt="">
+            </div>
+            <div class="col-12 col-lg-5">
+              <h5>DAS LANTECH - ZENTRUM FÜR DIGITALISIERUNG, TECHNOLOGIE UND DIENSTLEISTUNGEN</h5>
+              <p>Die Unternehmen aus dem Lantech versorgen die Region und die Welt mit wichtigen Dienstleistungen rund um Informationstechnologie, Bauwesen und Innovationen aller Art.</p>
+              <p>Lantech Innovationszentrum<br>
+              Bruggfeldstraße 5<br>
+              6500 Landeck<br>
+              Österreich</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="px-5">
+        <div class="container my-2 py-2">
+          <div class="row">
+            <div class="col-12 col-lg-1">
+              <ul>
+                <li><a href="{% url 'mywebsite:impressum' %}" class="text-white">Impressum</a></li>
+              </ul>
+            </div>
+            <div class="col-12 col-lg-1">
+              <ul>
+                <li><a href="{% url 'mywebsite:datenschutz' %}" class="text-white">Datenschutz</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="container my-2 py-2">
+          <div class="row mb-5">
+            <div class="col-12 col-lg-6">
+              <img src="{% static '/image/Logo.png' %}" class="logo" alt="Daten Punkt Logo" height="65" width="65">
+            </div>
+            <div class="col-12 col-lg-6 text-white align-self-end ">
+              <small class="d-flex justify-content-end">2023© Daten Punkt</small>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+
+      <div id="overlay">
+        <div id="content"><div data-tf-widget="uo7LTM4P" data-tf-opacity="100" data-tf-iframe-props="title=Bewerbungsformulars" data-tf-transitive-search-params data-tf-medium="snippet" style="width:100%;height:500px;"></div>Popup</div>
+      </div>
+
+      {% block javasript %}
+      <script src="{% static '/js/main.js' %}"></script>
+      {% endblock %}
+
+    </div>
+
+{% endblock body %}
