@@ -38,7 +38,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     
+    #Party
+    'crispy_forms',
+    "crispy_bootstrap5",
+     
+    # Apps
     'mywebsite',
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -135,3 +141,14 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+
+
+# Acoounts settings
+LOGIN_REDIRECT_URL = '/'
+LOGIN_URL = 'accounts:login'
+SESSION_COOKIE_AGE = 60 * 60 * 24 * 30
+
+AUTH_USER_MODEL = "accounts.CustomUser"
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"

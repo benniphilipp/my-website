@@ -1,0 +1,17 @@
+{% extends "basic.html" %}
+{% load static %}
+
+{% block body %}
+<link rel="stylesheet" type="text/css" href="{% static '/assets/css/accounts.css' %}">
+
+    <!--Sidebar-->
+    {% include "includes/sidebar.html" %}
+
+    <div class="container-fluid p-0 bg-body">
+        
+        <!--Navbar-->
+        {% include "includes/navbar.html" %}
+
+    </div>
+
+{% endblock body %}
