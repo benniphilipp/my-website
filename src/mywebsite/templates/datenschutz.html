@@ -1,4 +1,4 @@
-{% extends "basic.html" %}
+{% extends "page.html" %}
 {% load static %}
 
 {% block body %}
@@ -10,10 +10,9 @@
         <header class="d-flex flex-wrap align-items-center py-4 position-relative">
       
         <a href="/" class="d-flex align-items-center">
-            <img src="/image/Logo.png" alt="Daten Punkt Logo" height="45" width="45">
+            <img src="{% static '/image/Logo.png' %}" alt="Daten Punkt Logo" height="45" width="45">
         </a>
     
-
         <span class="menu-btn">
             <span class="btn-line"></span>
             <span class="btn-line"></span>

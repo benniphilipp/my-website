@@ -8,7 +8,8 @@ mix.options({
 mix
 
     .js('assets/js/main.js', 'static/js/main.js')
-    .sass('assets/scss/main.scss', 'static/styles/style.css').sourceMaps();
+    .sass('assets/scss/page/main.scss', 'static/styles/style.css').sourceMaps()
+    .sass('assets/scss/basic/main.scss', 'static/styles/basic.css').sourceMaps()
 
 
     
