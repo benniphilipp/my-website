@@ -1,13 +1,13 @@
-
-    <div class="modal-header">
-        <h5 class="modal-title" id="createCampaignModalLabel">Create Won Campaign</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-    </div>
-    <div class="modal-body">
-        <form id="wonCampaignForm" method="post">
-            {% csrf_token %}
-            {{ won_campaigns_form.as_p }}
-            <button type="submit" class="btn btn-primary">Create</button>
-        </form>        
-    </div>
+{% load crispy_forms_tags %}
+<div class="modal-header">
+    <h5 class="modal-title" id="createCampaignModalLabel">Create Won Campaign</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+    <form id="wonCampaignForm" method="post" data-url="{% url 'customer:save_campaign' %}">
+        {% csrf_token %}
+        {{ won_campaigns_form|crispy }}
+        <button type="submit" class="btn btn-primary">Create</button>
+    </form>        
+</div>
 

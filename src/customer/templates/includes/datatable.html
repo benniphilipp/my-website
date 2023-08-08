@@ -1,34 +1,19 @@
 <div class="card">
-    <div class="card-datatable table-responsive">
-        <table id="example" class="table hover table-bordered" cellspacing="0" width="100%">
-            <thead>
+    <table id="customerTable" class="display" style="width:100%">
+        <thead>
             <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Ziel</th>
-                <th>Datum</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Street Address</th>
+                <th>Postal Code</th>
+                <th>City</th>
+                <th>Country</th>
+                <th>Website</th>
+                <th>Phone Number</th>
+                <th>Actions</th>
             </tr>
-            </thead>
-            <tfoot>
-            <tr>
-                <th></th>
-                <th>Titel</th>
-                <th>Ziel</th>
-                <th>Datum</th>
-            </tr>
-            </tfoot>
-            <tbody>
+        </thead>
 
-                {% for customer in object_list %}
-                <tr>
-                    <td>{{ forloop.counter }}</td>
-                    <td>{{ customer.first_name }} {{ customer.last_name }}</td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                {% endfor %}
-
-            </tbody>
-        </table>
-    </div>
+    </table>
 </div>

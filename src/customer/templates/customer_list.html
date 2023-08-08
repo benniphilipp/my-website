@@ -12,23 +12,25 @@
         Create Won Campaign
     </button>
 
-    <div class="container-fluid px-4">
-        <div class="row">
-            <div class="col-12 mt-3">
+    <!-- Button to trigger the modal -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#openCustomerFormModal">
+        Create Won Campaign
+    </button>
 
-                <!--Datatable-->
-                {% include "includes/datatable.html" %}
 
-            </div>
-        </div>
+    <div class="col-12 mt-3">
+
+        <!--Datatable-->
+        {% include "includes/datatable.html" %}
+
     </div>
+ 
     
 
 {% endblock body %}
 
 
 {% block javasript %}
-
 <!-- Modal -->
 <div class="modal fade" id="createCampaignModal" tabindex="-1" role="dialog" aria-labelledby="createCampaignModal" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -38,44 +40,62 @@
     </div>
 </div>
 
+<div class="modal fade" id="openCustomerFormModal" tabindex="-1" role="dialog" aria-labelledby="openCustomerFormModal" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="updateCustomerModal" tabindex="-1" role="dialog" aria-labelledby="updateCustomerModal" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+        </div>
+    </div>
+</div>
+
+<input type="hidden" id="hiddenUrl" value="{% url 'customer:load_campaign_form' %}">
+<input type="hidden" id="formUrl" value="{% url 'customer:customer-load-form' %}">
+{% csrf_token %}
 <script>
-    $('#createCampaignModal').on('show.bs.modal', function (event) {
-        var modal = $(this);
 
-        $.ajax({
-            url: '{% url "customer:load_campaign_form" %}',
-            type: 'GET',
-            dataType: 'json',
-            processData: false,
-            contentType: false,
-            success: function (data) {
-                modal.find('.modal-content').html(data.form_html); // Insert form_html into the modal body
-            }
-        });
-    });
-
-    $('#createCampaignModal').on('submit', '#wonCampaignForm', function (event) {
-        event.preventDefault();
-        var form = $(this);
     
-        $.ajax({
-            url: '{% url "customer:save_campaign" %}',
-            type: 'POST',
-            data: form.serialize(),
-            success: function (data) {
-                if (data.success) {
-                    // Zeige eine Erfolgsmeldung auf der Seite an
-                    $('#successMessage').text('Kampagne erfolgreich gespeichert.');
-                    $('#createCampaignModal').modal('hide');
-                    // Leere das Formular
-                    form.trigger('reset');
-                } else {
-                    // Zeige eine Fehlermeldung auf der Seite an
-                    $('#errorMessage').text('Fehler beim Speichern der Kampagne.');
-                }
-            }
-        });
-    });
-</script>
+    var csrfToken = $('input[name=csrfmiddlewaretoken]').val();
 
+    var dataTable = $('#customerTable').DataTable({
+        ajax: {
+            url: "{% url 'customer:customer-list-json' %}",
+            dataSrc: ""
+        },
+        columns: [
+            { data: "first_name" },
+            { data: "last_name" },
+            { data: "email" },
+            { data: "street_address" },
+            { data: "postal_code" },
+            { data: "city" },
+            { data: "country" },
+            { data: "website" },
+            { data: "phone_number" },
+            { data: null, render: function(data, type, row) {
+                return '<button class="btn btn-primary open-update-modal" data-customer-id="' + row.id + '" data-csrf="' + csrfToken + '">Update</button>';
+            }},
+        ]
+    });
+    
+    // Hier fügst du das CSRF-Token in den Header deiner AJAX-Anfragen ein
+    $.ajaxSetup({
+        beforeSend: function(xhr, settings) {
+            xhr.setRequestHeader("X-CSRFToken", $('input[name=csrfmiddlewaretoken]').val());
+        }
+    });
+    
+    $(document).on('click', '.open-update-modal', function () {
+        var customerId = $(this).data('customer-id');
+        // Führe den Ajax-Aufruf durch, um das Update-Formular zu laden
+    });
+
+</script>
 {% endblock %}

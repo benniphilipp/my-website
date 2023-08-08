@@ -1,13 +1,14 @@
 {% load crispy_forms_tags %}
 
 <div class="modal-header">
-    <h5 class="modal-title" id="openCustomerFormModal">Create Update</h5>
+    <h5 class="modal-title" id="updateCustomerModal">Create Update</h5>
     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 </div>
 <div class="modal-body">
-    <form id="customerForm" method="post" data-url="{% url 'customer:create_customer_ajax' %}">
+    <form id="updateCustomerForm" method="post">
         {% csrf_token %}
-        {{ customer_form|crispy }}
+        {{ form|crispy }}
+        <input type="hidden" id="customerId">
         <button type="submit">Speichern</button>
     </form> 
 </div>
