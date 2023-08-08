@@ -1,5 +1,6 @@
 {
     "/static/js/main.js": "/static/js/main.js",
-    "/static/styles/style.css": "/static/styles/style.css",
-    "/static/styles/basic.css": "/static/styles/basic.css"
+    "/static/js/page.js": "/static/js/page.js",
+    "/static/styles/basic.css": "/static/styles/basic.css",
+    "/static/styles/style.css": "/static/styles/style.css"
 }
