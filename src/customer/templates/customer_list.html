@@ -25,7 +25,6 @@
 
     </div>
  
-    
 
 {% endblock body %}
 
@@ -58,44 +57,20 @@
 
 <input type="hidden" id="hiddenUrl" value="{% url 'customer:load_campaign_form' %}">
 <input type="hidden" id="formUrl" value="{% url 'customer:customer-load-form' %}">
-{% csrf_token %}
 <script>
 
-    
-    var csrfToken = $('input[name=csrfmiddlewaretoken]').val();
+    $(document).ready(function() {
 
-    var dataTable = $('#customerTable').DataTable({
-        ajax: {
-            url: "{% url 'customer:customer-list-json' %}",
-            dataSrc: ""
-        },
-        columns: [
-            { data: "first_name" },
-            { data: "last_name" },
-            { data: "email" },
-            { data: "street_address" },
-            { data: "postal_code" },
-            { data: "city" },
-            { data: "country" },
-            { data: "website" },
-            { data: "phone_number" },
-            { data: null, render: function(data, type, row) {
-                return '<button class="btn btn-primary open-update-modal" data-customer-id="' + row.id + '" data-csrf="' + csrfToken + '">Update</button>';
-            }},
-        ]
+        var table = new DataTable('#example', {
+            stripeClasses:[],
+            language: {
+                url: '//cdn.datatables.net/plug-ins/1.13.5/i18n/de-DE.json',
+            },
+        });
+
+
     });
-    
-    // Hier fügst du das CSRF-Token in den Header deiner AJAX-Anfragen ein
-    $.ajaxSetup({
-        beforeSend: function(xhr, settings) {
-            xhr.setRequestHeader("X-CSRFToken", $('input[name=csrfmiddlewaretoken]').val());
-        }
-    });
-    
-    $(document).on('click', '.open-update-modal', function () {
-        var customerId = $(this).data('customer-id');
-        // Führe den Ajax-Aufruf durch, um das Update-Formular zu laden
-    });
+
 
 </script>
 {% endblock %}

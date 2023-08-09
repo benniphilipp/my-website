@@ -27,14 +27,6 @@ class CustomerListView(LoginRequiredMixin, ListView):
     context_object_name = 'customers'
 
 
-class CustomerListJsonView(ListView):
-    model = CustomerClass
-
-    def render_to_response(self, context, **response_kwargs):
-        customers = list(self.get_queryset().values())
-        return JsonResponse(customers, safe=False)
-
-
 # Customer Form View
 class LoadCustomerFormView(LoginRequiredMixin, View):
     def get(self, request, *args, **kwargs):
