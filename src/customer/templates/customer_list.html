@@ -25,6 +25,7 @@
 
     </div>
  
+    
 
 {% endblock body %}
 
@@ -57,19 +58,10 @@
 
 <input type="hidden" id="hiddenUrl" value="{% url 'customer:load_campaign_form' %}">
 <input type="hidden" id="formUrl" value="{% url 'customer:customer-load-form' %}">
+{% csrf_token %}
 <script>
 
-    $(document).ready(function() {
 
-        var table = new DataTable('#example', {
-            stripeClasses:[],
-            language: {
-                url: '//cdn.datatables.net/plug-ins/1.13.5/i18n/de-DE.json',
-            },
-        });
-
-
-    });
 
 
 </script>

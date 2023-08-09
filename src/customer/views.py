@@ -40,6 +40,7 @@ class LoadCustomerFormView(LoginRequiredMixin, View):
 class CustomerCreateAjaxView(LoginRequiredMixin, View):    
     def post(self, request, *args, **kwargs):
         form = CustomerForm(request.POST)
+        print(form)
         if form.is_valid():
             form.save()
             return JsonResponse({'success': True})

@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
 
-    // Cookie
     const getCookie =(name) => {
         let cookieValue = null;
         if (document.cookie && document.cookie !== '') {
@@ -37,7 +36,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-
     // Send form Value 
     $('#createCampaignModal').on('submit', '#wonCampaignForm', function (event) {
         event.preventDefault();
@@ -63,8 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-
-    // Customer Form Open
+    // Open Form Customer
     $('#openCustomerFormModal').on('show.bs.modal', function(event) {
         var modal = $(this);
         var formUrl = $("#formUrl").val();
@@ -82,7 +79,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
-    // Customer Form Save
     $('#openCustomerFormModal').on('submit', '#customerForm', function (event) {
         event.preventDefault();
         var form = $(this);
@@ -94,6 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
             success: function (data) {
                 if (data.success) {
                     $('#openCustomerFormModal').modal('hide');
+                    setTimeout(updateDataTable, 500);
                     // Hier können Sie Aktionen durchführen, z.B. die Liste der Kunden aktualisieren
                 } else {
                     // Zeige Fehlermeldungen an
@@ -123,28 +120,25 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
-    // // Customer Update Form Save
-    $(document).ready(function () {
-        // Customer Update Form Save
-        $('#updateCustomerModal').on('submit', '#updateCustomerForm', function (event) {
-            event.preventDefault();
-            var form = $(this);
-    
-            var customerIdUrl = $('#customerId').val();
-    
-            $.ajax({
-                url: '/customer/update/' + customerIdUrl + '/',
-                type: 'POST',
-                data: form.serialize(),
-                success: function (data) {
-                    if (data.success) {
-                        $('#updateCustomerModal').modal('hide');
-                        location.reload();
-                    }
+
+    $('#updateCustomerModal').on('submit', '#updateCustomerForm', function (event) {
+        event.preventDefault();
+        var form = $(this);
+
+        var customerIdUrl = $('#customerId').val();
+
+        $.ajax({
+            url: '/customer/update/' + customerIdUrl + '/',
+            type: 'POST',
+            data: form.serialize(),
+            success: function (data) {
+                if (data.success) {
+                    $('#updateCustomerModal').modal('hide');
+                    setTimeout(updateDataTable, 500);
+                    // Hier können Sie Aktionen durchführen, z.B. die Kundenliste aktualisieren
                 }
-            });
+            }
         });
     });
 
-    
 });
